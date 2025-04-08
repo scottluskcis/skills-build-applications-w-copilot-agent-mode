@@ -11,9 +11,9 @@ function Leaderboard() {
   }, []);
 
   return (
-    <div>
-      <h1>Leaderboard</h1>
-      <table>
+    <div className="container mt-4">
+      <h1 className="text-center">Leaderboard</h1>
+      <table className="table table-striped">
         <thead>
           <tr>
             <th>Username</th>

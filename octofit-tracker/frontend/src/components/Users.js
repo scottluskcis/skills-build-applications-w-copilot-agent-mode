@@ -11,13 +11,24 @@ function Users() {
   }, []);
 
   return (
-    <div>
-      <h1>Users</h1>
-      <ul>
-        {users.map(user => (
-          <li key={user.id}>{user.username}</li>
-        ))}
-      </ul>
+    <div className="container mt-4">
+      <h1 className="text-center">Users</h1>
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map(user => (
+            <tr key={user.id}>
+              <td>{user.id}</td>
+              <td>{user.username}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
